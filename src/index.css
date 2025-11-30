@@ -1,68 +1,105 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(ellipse at center, purple, black);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.container {
+  position: relative;
+  width: 700px;
+  padding: 30px 30px 20px 30px;
+  background: #fff;
+  border-radius: 0.3rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.container .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: radial-gradient(circle at bottom right, #0d0d0d, purple);
+  border-top-right-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
+}
+
+.container .text-box {
+  width: 650px;
+  height: 300px;
+  margin: 50px auto 20px auto;
+}
+
+.container .text-box textarea {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 0.2rem;
+  resize: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.container .tools-box {
+  width: 650px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.container .tools-box .box {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.container .tools-box .box button {
+  background: radial-gradient(circle at bottom right, #0d0d0d, purple);
+  font-size: 15px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+  color: #fff;
+  border-radius: 0.5rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.container .tools-box .box select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 10px;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  background: radial-gradient(circle at bottom right, #0d0d0d, purple);
+  color: #fff;
+  border: none;
+  outline: none;
+  max-width: 330px;
+}
+
+.container .tools-box .box select option {
+  background: #222;
+  color: #fff;
+}
+
+.container .tools-box .box.box-3 {
+  background: radial-gradient(circle at bottom right, #0d0d0d, purple);
+  color: #fff;
+  font-size: 14px;
+  padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+  border-radius: 0.5rem;
 }
